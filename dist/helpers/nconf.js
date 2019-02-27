@@ -1,0 +1,1 @@
+"use strict";var e=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}},t=e(require("cfenv")),r=e(require("nconf")),u=require("path"),f=t.default.getAppEnv();r.default.defaults(f).file(u.resolve(__dirname,"../../.env")).env(),module.exports=r.default;
