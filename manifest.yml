@@ -2,7 +2,7 @@ applications:
   - path: .
     name: static.goid.com.sg
     environment_json: {}
-    memory: 128M
-    instancs: 1
+    memory: 256M
+    instances: 1
     disk_quota: 1024M
     services: []
