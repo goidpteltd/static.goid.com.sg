@@ -2,11 +2,12 @@ import cfenv from "cfenv";
 import nconf from "nconf";
 import { resolve } from "path";
 
-const cfenvStr = cfenv.getAppEnv();
+const cfenvData = cfenv.getAppEnv();
 
 nconf
-  .defaults(cfenvStr)
   .file(resolve(__dirname, "../../.env"))
   .env();
+
+nconf.set('webserver:port', cfenvData.port);
 
 export = nconf;
